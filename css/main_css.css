@@ -154,11 +154,15 @@ main{
 
 /*CONFIGURAÇÕES SESSÃO HABILIDADES - INICIO*/
 #habilidades, #experiencia, #projetos{
-	height: 100vh;
 	background-color: var(--cor-fundo-conteudo);
 	grid-column-start: 2;
 	grid-column-end: 3;
 	color: white;
+}
+
+
+#habilidades, #projetos{
+	height: 100vh;
 }
 /*CONFIGURAÇÕES SESSÃO APRESENTAÇÃO - FIM*/
 

@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main_css.css">
 	<link rel="stylesheet" type="text/css" href="css/habilidades.css">
+	<link rel="stylesheet" type="text/css" href="css/timeline.css">
 </head>
 <body>
 
@@ -117,9 +118,107 @@
 
 		<section id="experiencia">
 
-			<div>
-				experiencia
-			</div>
+			<h1>Experiência</h1>
+
+			<div class="container left">
+			      <div class="content">
+			        <h2 class="titulo_cargo">2022 - Analista Comercial jr</h2>
+			        <p class="descricao_atividades">
+						Atuei na elaboração de automações desktop e web.
+						Analise de dados.
+						Geração de relatórios e indicadores automatizados. 
+
+						Ferramentas utilizadas:
+						Databricks, sql, python, excel vba e power bi.
+					</p>
+			      </div>
+			    </div>
+
+			    <div class="container right">
+			      <div class="content">
+			        <h2 class="titulo_cargo">2022 - Assistente Comercial</h2>
+			        <p class="descricao_atividades">
+			        	Atuei na elaboração de automações desktop e web.
+						Analise de dados.
+						Geração de relatórios e indicadores automatizados. 
+
+						Ferramentas utilizadas:
+						Databricks, sql, python, excel vba e power bi.
+			        </p>
+			      </div>
+			    </div>
+
+			    <div class="container left">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container right">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container left">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container right">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container left">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container right">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container left">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container right">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container left">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    <div class="container right">
+			      <div class="content">
+			        <h2>2016</h2>
+			        <p>Lorem ipsum..</p>
+			      </div>
+			    </div>
+
+			    
 			
 		</section>
 
@@ -173,8 +272,33 @@
 	<script>
 		/*inicio efeito d digitação*/
 		function typeWriter(elementos) {
+
+			console.log(elementos[0])
     
-	    	elementos.forEach((paragrafo, pos_p) => {	      
+	    		      
+	       		paragrafo_fatiado = elementos[0].innerHTML.split('')
+		       	elementos[0].innerHTML = '';
+		       	paragrafo_fatiado.forEach((letra, i) => {
+
+	       	    	setTimeout(() => {
+		            	if (letra == "|"){
+		            		elementos[0].innerHTML += "<br>"
+		          		}
+		          		else{
+		            		elementos[0].innerHTML += letra
+		          		}
+	        		}
+	          		, 75 * i)
+	      		})
+    		
+	    }
+
+	    /*
+function typeWriter(elementos) {
+
+			console.log(elementos[0])
+    
+	    	elementos[0].forEach((paragrafo, pos_p) => {	      
 	       		paragrafo_fatiado = paragrafo.innerHTML.split('')
 		       	elementos[pos_p].innerHTML = '';
 		       	paragrafo_fatiado.forEach((letra, i) => {
@@ -191,6 +315,7 @@
 	      		})
     		}) 
 	    }
+	    */
 
       const titulo = document.querySelectorAll('p')
       										 //.apresentacao
@@ -251,6 +376,7 @@
 	</script>
 	<script src="https://kit.fontawesome.com/b78cb518f6.js" crossorigin="anonymous"></script>
 	<script src="js/habilidades.js"></script>
+	<script src="js/timeline.js"></script>
 
 </body>
 </html>
