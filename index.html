@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gabriel Mügge</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main_css.css">
+</head>
+<body>
+
+	
+
+	<main>
+		<div id="all-menu">
+
+			<img id="foto-perfil" src="img/perfil2.jpg">
+			<h1>Gabriel Mügge</h1>
+
+			<nav id="menu">
+				<ul>
+					<li><a href="#apresentacao">Home</a></li>
+					<li><a href="#habilidades">Habilidades</a></li>
+					<li><a href="#experiencia">Experiencia</a></li>
+					<li><a href="#projetos">Projetos</a></li>
+				</ul>
+			</nav>
+
+			<ul id="redes-sociais">
+				<a href="https://www.linkedin.com/in/gabrielmugge-351255118/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/Gabriel-Mugge" target="_blank"><i class="fa-brands fa-github"></i></a>
+				<a href="https://www.youtube.com/@gabrielmugge875/videos" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+			</ul>
+		</div>
+
+		<section id="apresentacao">
+			<div id="mascara-texto-apresentacao">
+				<div id="texto-apresentacao">	
+					<p>Olá, tudo supimpa?|
+					Prazer, Gabriel Mügge|
+					Dev Fullstack|
+					Cientista de dados e|
+					Desenvolvedor RPA.</p>
+				</div>
+			</div>
+		
+		</section>
+
+
+
+
+		<section id="habilidades">
+
+			<div>
+				habilidades
+				
+			</div>
+			
+		</section>
+
+
+		<section id="experiencia">
+
+			<div>
+				experiencia
+			</div>
+			
+		</section>
+
+
+		<section id="projetos">
+
+			<div>
+				projetos
+			</div>
+			
+		</section>
+
+
+		
+	</main>
+	
+
+
+	<!--
+
+		php
+		mysql
+		js
+		html
+		css
+		c/c++
+		python 
+
+
+		sklear
+		flask
+		poo
+		pdo
+		sqlalquemy
+		wtfroms
+
+
+		-proejto bomba
+
+		ára fazer as paradas aparecerem na tela
+		https://www.youtube.com/watch?v=pKTOT63X9XQ&t=304s
+
+		efeito 3d imagens:
+		https://www.youtube.com/watch?v=VJS0FfYljak
+
+		efito de scroo suave:
+		https://www.youtube.com/watch?v=Mutjus8WI2w
+
+	-->
+
+	<script>
+		/*inicio efeito d digitação*/
+		function typeWriter(elementos) {
+    
+	    	elementos.forEach((paragrafo, pos_p) => {
+
+
+	      
+	       paragrafo_fatiado = paragrafo.innerHTML.split('')
+	       elementos[pos_p].innerHTML = '';
+	       paragrafo_fatiado.forEach((letra, i) => {
+
+	       	  setTimeout(() => {
+	          
+		          if (letra == "|"){
+		            elementos[pos_p].innerHTML += "<br>"
+		          }
+		          else{
+		            elementos[pos_p].innerHTML += letra
+		          }
+	        	}
+	          , 75 * i)
+	        
+	      })
+
+    	}) 
+	   }
+
+      const titulo = document.querySelectorAll('p')
+
+	  typeWriter(titulo)
+	  /*fim efeito d digitação*/
+
+
+	  /*inicio efito de scrool suave*/
+	  const menuLinks = document.querySelectorAll('#menu ul li a[href^="#"]');
+	  
+
+	function getDistanceFromTheTop(element) {
+	  const id = element.getAttribute("href");
+	  return document.querySelector(id).offsetTop;
+	}
+
+
+	function scrollToSection(event) {
+		
+	  event.preventDefault();
+	  const distanceFromTheTop = getDistanceFromTheTop(event.target);
+	  smoothScrollTo(0, distanceFromTheTop, 1000);
+	}
+
+	menuLinks.forEach((link) => {
+	  link.addEventListener("click", scrollToSection);
+	});
+
+	function smoothScrollTo(endX, endY, duration) {
+	  const startX = window.scrollX || window.pageXOffset;
+	  const startY = window.scrollY || window.pageYOffset;
+	  const distanceX = endX - startX;
+	  const distanceY = endY - startY;
+	  const startTime = new Date().getTime();
+
+	  duration = typeof duration !== "undefined" ? duration : 400;
+
+	  const easeInOutQuart = (time, from, distance, duration) => {
+	    if ((time /= duration / 2) < 1)
+	      return (distance / 2) * time * time * time * time + from;
+	    return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
+	  };
+
+	  const timer = setInterval(() => {
+	    const time = new Date().getTime() - startTime;
+	    const newX = easeInOutQuart(time, startX, distanceX, duration);
+	    const newY = easeInOutQuart(time, startY, distanceY, duration);
+	    if (time >= duration) {
+	      clearInterval(timer);
+	    }
+	    window.scroll(newX, newY);
+	  }, 1000 / 60);
+	}
+
+	/*fim efito de scrool suave*/
+	  
+	</script>
+	<script src="https://kit.fontawesome.com/b78cb518f6.js" crossorigin="anonymous"></script>
+
+</body>
+</html>

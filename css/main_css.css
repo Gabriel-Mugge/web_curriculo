@@ -1,0 +1,170 @@
+:root{
+	--cor-letras-azul: #1114BA;
+	--cor-fundo-menu: #111418;
+	--cor-fundo-conteudo: #212529;
+	--cor-borda-perfil: #343A40;
+}
+
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+/*CONFIGURAÇÕES DE MENU - INICIO*/
+main{
+	display: grid;
+	grid-template-columns: 250px 1fr;
+	grid-template-areas: "menu" "conteudo";
+
+}
+
+
+#all-menu{
+	position: sticky;
+	top: 0px;
+	height: 100vh;
+	width: 250px;
+	box-sizing: border-box;
+	background-color: var(--cor-fundo-menu);
+	grid-area: "menu";
+}
+
+
+#all-menu a{
+	color: white;
+	text-decoration: none;
+	text-align: center;
+}
+
+
+#foto-perfil{
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	border: 5px solid var(--cor-borda-perfil);
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-left: 50%;
+	transform: translate(-50%, 0);
+}
+
+
+#all-menu h1{
+	font-size: 1.5em;
+	margin-bottom: 50px;
+	color: white;
+	text-align: center;
+}
+
+
+#menu > ul > li{
+	line-height: 2em;
+	font-size: 1.2em;
+	font-weight: bolder;
+	text-align: center;
+}
+
+
+#menu > ul > li > a:hover{
+	color: var(--cor-letras-azul);
+	transition: 0.3s;
+}
+
+
+#redes-sociais{
+	text-align: center;
+	width: 200px;
+	bottom: 20px;
+	margin-left: 50%;
+	transform: translate(-50%, 0px);
+	margin-top: 85%;
+	
+
+}
+
+
+#redes-sociais i{
+	font-size: 2em;
+	margin-right: 20px; 
+	
+}
+
+
+#redes-sociais i:hover{
+	color: var(--cor-letras-azul);
+}
+/*CONFIGURAÇÕES DE MENU - FIM*/
+
+
+/*CONFIGURAÇÕES SESSÃO APRESENTAÇÃO - INICIO*/
+#apresentacao{
+	height: 100vh;
+	background-image: url("../img/main_04.jpg");
+	grid-column-start: 2;
+	grid-column-end: 3;
+	background-size: cover;
+}
+
+
+
+
+#mascara-texto-apresentacao{	
+	position: relative;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	font-weight: bolder;
+	font-size: 2em;
+	height: 100%;
+	width: 100%;
+	line-height: 1.3em;
+
+}
+
+
+#texto-apresentacao{
+	position: absolute;
+	margin-left: calc(50% - 250px);
+	margin-top: 50vh;
+	transform: translate(0px, -50%);
+}
+
+
+p::after {
+	content: '|';
+	opacity: 1;
+	margin-left: 5px;
+	display: inline-block;
+	animation: blink .7s infinite;
+}
+
+
+@keyframes blink {
+	0%, 100% {
+  		opacity: 1;
+	}
+	50% {
+  		opacity: 0;
+	}
+}
+/*CONFIGURAÇÕES SESSÃO APRESENTAÇÃO - FIM*/
+
+
+/*CONFIGURAÇÕES SESSÃO HABILIDADES - INICIO*/
+#habilidades, #experiencia, #projetos{
+	height: 100vh;
+	background-color: var(--cor-fundo-conteudo);
+	grid-column-start: 2;
+	grid-column-end: 3;
+	color: white;
+}
+/*CONFIGURAÇÕES SESSÃO APRESENTAÇÃO - FIM*/
+
+
+
+
+
+
+
