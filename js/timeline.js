@@ -9,7 +9,7 @@ const direita = document.querySelectorAll(".right")
     
     if (pos < qtd_direita){ 
       //direita[pos].style.transform = "translateX(-100%)"
-      direita[pos].style.transform = "translateX(-150%)"
+      direita[pos].style.transform = "translateX(-120%)"
       direita[pos].style.transition = "all 2s"
       direita[pos].style.zIndex = "1"
     }

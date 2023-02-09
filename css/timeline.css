@@ -85,6 +85,7 @@
 .right {
   box-sizing: border-box; 
   left: 110%;
+  width: 50%;
 }
 
 
