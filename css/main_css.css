@@ -132,7 +132,7 @@ main{
 }
 
 
-p::after {
+#texto-apresentacao > p::after {
 	content: '|';
 	opacity: 1;
 	margin-left: 5px;

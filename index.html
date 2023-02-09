@@ -4,6 +4,7 @@
 	<title>Gabriel Mügge</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/main_css.css">
+	<link rel="stylesheet" type="text/css" href="css/habilidades.css">
 </head>
 <body>
 
@@ -49,10 +50,67 @@
 
 		<section id="habilidades">
 
-			<div>
-				habilidades
+			<h1>Habilidades</h1>
+
+			<div id=carrosel>
+		
+		
+				<div class="centro">
+
+					<div class='habilidade'>
+						<p>CSS</p>
+					</div>
+					<div class="sombra"></div>
+
+				</div>
+
+
+
+				<div class="direita">
+					<div class='habilidade'>
+						<p>JS</p>
+					</div>
+					<div class="sombra"></div>
+				</div>
+
+				<div class="esquerda">
+					
+						<div class='habilidade'>
+							<p>HTML</p>
+						</div>
+						<div class="sombra"></div>
+					
+				</div>
+
+				<div class="hidden">
+					<div class='habilidade'>
+						<p>PHP</p>
+					</div>
+					<div class="sombra"></div>
+				</div>
+
+				<div class="hidden">
+					<div class='habilidade'>
+						<p>C/C++</p>
+					</div>
+					<div class="sombra"></div>
+				</div>
+
+				<div class="hidden">
+					<div class='habilidade'>
+						<p>Python</p>
+					</div>
+					<div class="sombra"></div>
+				</div>
+
 				
 			</div>
+
+			<nav id="controle-carrosel-habilidades">
+				<a id="voltar" href="#"><i class="fa-solid fa-circle-chevron-left"></i></a>
+				<a id="avancar" href="#"><i class="fa-solid fa-circle-chevron-right"></i></a>
+			</nav>
+			
 			
 		</section>
 
@@ -116,31 +174,26 @@
 		/*inicio efeito d digitação*/
 		function typeWriter(elementos) {
     
-	    	elementos.forEach((paragrafo, pos_p) => {
+	    	elementos.forEach((paragrafo, pos_p) => {	      
+	       		paragrafo_fatiado = paragrafo.innerHTML.split('')
+		       	elementos[pos_p].innerHTML = '';
+		       	paragrafo_fatiado.forEach((letra, i) => {
 
-
-	      
-	       paragrafo_fatiado = paragrafo.innerHTML.split('')
-	       elementos[pos_p].innerHTML = '';
-	       paragrafo_fatiado.forEach((letra, i) => {
-
-	       	  setTimeout(() => {
-	          
-		          if (letra == "|"){
-		            elementos[pos_p].innerHTML += "<br>"
-		          }
-		          else{
-		            elementos[pos_p].innerHTML += letra
-		          }
-	        	}
-	          , 75 * i)
-	        
-	      })
-
-    	}) 
-	   }
+	       	    	setTimeout(() => {
+		            	if (letra == "|"){
+		            		elementos[pos_p].innerHTML += "<br>"
+		          		}
+		          		else{
+		            		elementos[pos_p].innerHTML += letra
+		          		}
+	        		}
+	          		, 75 * i)
+	      		})
+    		}) 
+	    }
 
       const titulo = document.querySelectorAll('p')
+      										 //.apresentacao
 
 	  typeWriter(titulo)
 	  /*fim efeito d digitação*/
@@ -197,6 +250,7 @@
 	  
 	</script>
 	<script src="https://kit.fontawesome.com/b78cb518f6.js" crossorigin="anonymous"></script>
+	<script src="js/habilidades.js"></script>
 
 </body>
 </html>
