@@ -6,6 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main_css.css">
 	<link rel="stylesheet" type="text/css" href="css/habilidades.css">
 	<link rel="stylesheet" type="text/css" href="css/timeline.css">
+	<link rel="stylesheet" type="text/css" href="css/projetos.css">
 </head>
 <body>
 
@@ -225,9 +226,89 @@
 
 		<section id="projetos">
 
-			<div>
-				projetos
+			<h1>Projetos</h1>
+
+			<div id="all-projects">
+			
+			
+			<div onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<div  class="card-project">
+					<h2>Titulo Projeto 1</h2>
+					<p>adnsdakshdkashdkashdkas
+					asdasdasdasdasdasdasdsa
+					dasdasdasdasdsadasdasdasdasd
+					adsdadsadasdsadsadasdsad</p>
+				</div>
+
+				<div class="card-project-shadow"></div>
 			</div>
+
+			<div id="aux2" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<div class="card-project">
+					<h2>Titulo Projeto 2</h2>
+					<p>adnsdakshdkashdkashdkas
+					asdasdasdasdasdasdasdsa
+					dasdasdasdasdsadasdasdasdasd
+					adsdadsadasdsadsadasdsad</p>
+				</div>
+
+				<div class="card-project-shadow"></div>
+			</div>
+
+			
+			<div id="aux3" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<div class="card-project">
+					<h2>Titulo Projeto 3</h2>
+					<p>adnsdakshdkashdkashdkas
+					asdasdasdasdasdasdasdsa
+					dasdasdasdasdsadasdasdasdasd
+					adsdadsadasdsadsadasdsad</p>
+				</div>
+
+
+				<div class="card-project-shadow"></div>
+			</div>
+
+
+			<div id="aux1" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<div  class="card-project">
+					<h2>Titulo Projeto 1</h2>
+					<p>adnsdakshdkashdkashdkas
+					asdasdasdasdasdasdasdsa
+					dasdasdasdasdsadasdasdasdasd
+					adsdadsadasdsadsadasdsad</p>
+				</div>
+
+				<div class="card-project-shadow"></div>
+			</div>
+
+			<div id="aux2" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<div class="card-project">
+					<h2>Titulo Projeto 2</h2>
+					<p>adnsdakshdkashdkashdkas
+					asdasdasdasdasdasdasdsa
+					dasdasdasdasdsadasdasdasdasd
+					adsdadsadasdsadsadasdsad</p>
+				</div>
+
+				<div class="card-project-shadow"></div>
+			</div>
+
+			
+			<div id="aux3" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<div class="card-project">
+					<h2>Titulo Projeto 3</h2>
+					<p>adnsdakshdkashdkashdkas
+					asdasdasdasdasdasdasdsa
+					dasdasdasdasdsadasdasdasdasd
+					adsdadsadasdsadsadasdsad</p>
+				</div>
+
+
+				<div class="card-project-shadow"></div>
+			</div>
+
+		</div>
 			
 		</section>
 
@@ -235,39 +316,6 @@
 		
 	</main>
 	
-
-
-	<!--
-
-		php
-		mysql
-		js
-		html
-		css
-		c/c++
-		python 
-
-
-		sklear
-		flask
-		poo
-		pdo
-		sqlalquemy
-		wtfroms
-
-
-		-proejto bomba
-
-		ára fazer as paradas aparecerem na tela
-		https://www.youtube.com/watch?v=pKTOT63X9XQ&t=304s
-
-		efeito 3d imagens:
-		https://www.youtube.com/watch?v=VJS0FfYljak
-
-		efito de scroo suave:
-		https://www.youtube.com/watch?v=Mutjus8WI2w
-
-	-->
 
 	<script>
 		/*inicio efeito d digitação*/
@@ -293,32 +341,10 @@
     		
 	    }
 
-	    /*
-function typeWriter(elementos) {
 
-			console.log(elementos[0])
-    
-	    	elementos[0].forEach((paragrafo, pos_p) => {	      
-	       		paragrafo_fatiado = paragrafo.innerHTML.split('')
-		       	elementos[pos_p].innerHTML = '';
-		       	paragrafo_fatiado.forEach((letra, i) => {
-
-	       	    	setTimeout(() => {
-		            	if (letra == "|"){
-		            		elementos[pos_p].innerHTML += "<br>"
-		          		}
-		          		else{
-		            		elementos[pos_p].innerHTML += letra
-		          		}
-	        		}
-	          		, 75 * i)
-	      		})
-    		}) 
-	    }
-	    */
 
       const titulo = document.querySelectorAll('p')
-      										 //.apresentacao
+      										
 
 	  typeWriter(titulo)
 	  /*fim efeito d digitação*/
@@ -377,6 +403,7 @@ function typeWriter(elementos) {
 	<script src="https://kit.fontawesome.com/b78cb518f6.js" crossorigin="anonymous"></script>
 	<script src="js/habilidades.js"></script>
 	<script src="js/timeline.js"></script>
+	<script src="js/projetos.js"></script>
 
 </body>
 </html>
