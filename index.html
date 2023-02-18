@@ -42,9 +42,10 @@
 					Dev Fullstack|
 					Cientista de dados e|
 					Desenvolvedor RPA.</p>
+
+					<a class="curriculo" href="#" onclick="window.open('curriculo_gabriel_mugge.pdf');">Baixar Curriculo</a>
 				</div>
 			</div>
-		
 		</section>
 
 
@@ -232,13 +233,13 @@
 			
 			
 			<div onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
-				<div  class="card-project">
+				<a href="descricoes_projetos/modelo.html" target="_blank"><div  class="card-project">
 					<h2>Titulo Projeto 1</h2>
 					<p>adnsdakshdkashdkashdkas
 					asdasdasdasdasdasdasdsa
 					dasdasdasdasdsadasdasdasdasd
 					adsdadsadasdsadsadasdsad</p>
-				</div>
+				</div></a>
 
 				<div class="card-project-shadow"></div>
 			</div>
@@ -335,15 +336,25 @@
 		          		else{
 		            		elementos[0].innerHTML += letra
 		          		}
+
+		          		if (i == paragrafo_fatiado.length - 1){
+		          			dowload_curriculo.style.transition = "all 2s"
+		          			dowload_curriculo.style.opacity = '1'
+
+		          		}
 	        		}
 	          		, 75 * i)
 	      		})
+
+	      		
     		
 	    }
 
 
 
       const titulo = document.querySelectorAll('p')
+      var dowload_curriculo = document.querySelector('.curriculo')
+      
       										
 
 	  typeWriter(titulo)

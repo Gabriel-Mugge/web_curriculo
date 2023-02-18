@@ -3,12 +3,18 @@
 	--cor-fundo-menu: #111418;
 	--cor-fundo-conteudo: #212529;
 	--cor-borda-perfil: #343A40;
+	--cor-card-habilidades: #7371F9;
 }
 
 
 * {
 	padding: 0px;
 	margin: 0px;
+}
+
+
+body{
+	 overflow-x: hidden; 
 }
 
 
@@ -80,7 +86,9 @@ main{
 	bottom: 20px;
 	margin-left: 50%;
 	transform: translate(-50%, 0px);
-	margin-top: 85%;
+	/*margin-top: 85%;*/
+	position: absolute;
+	bottom: 20px;
 	
 
 }
@@ -126,9 +134,10 @@ main{
 
 #texto-apresentacao{
 	position: absolute;
-	margin-left: calc(50% - 250px);
+	/*margin-left: calc(50% - 250px);*/
+	margin-left: 50%;
 	margin-top: 50vh;
-	transform: translate(0px, -50%);
+	transform: translate(-50%, -50%);
 }
 
 
@@ -139,6 +148,25 @@ main{
 	display: inline-block;
 	animation: blink .7s infinite;
 }
+
+#texto-apresentacao > p{
+	margin-bottom: 30px;
+}
+
+.curriculo{
+	text-align: center;
+	text-decoration: none;
+	background-color: #7290C4;
+	border-radius: 10px;
+	padding: 10px;
+	color: white;
+	opacity: 0;
+	
+}
+
+
+
+
 
 
 @keyframes blink {
@@ -165,6 +193,7 @@ main{
 	height: 100vh;
 }
 /*CONFIGURAÇÕES SESSÃO APRESENTAÇÃO - FIM*/
+
 
 
 

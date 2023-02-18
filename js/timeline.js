@@ -3,6 +3,7 @@ const direita = document.querySelectorAll(".right")
   const esquerda = document.querySelectorAll(".left")
   const qtd_esquerda = esquerda.length
   var pos = 0
+  var chamou = false;
   
 
   function show_items_timeline(){
@@ -22,19 +23,19 @@ const direita = document.querySelectorAll(".right")
     }
     
     pos += 1
-
-    console.log(pos)
-
   }
 
 
-  /*setInterval(() => {show_items_timeline()}, 1000)*/
+
 
   function scroll_check(){
     var y = window.scrollY;
+    
 
-    if (y % 10 == 0){
-      show_items_timeline()
+    if (y / document.documentElement.scrollHeight > 0.36 && chamou == false){
+        show_items_timeline()
+        setInterval(() => {show_items_timeline()}, 1000)
+        chamou = true
     }
 
   }
