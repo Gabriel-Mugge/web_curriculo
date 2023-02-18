@@ -1,0 +1,44 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+body {
+	background-color: #212529;
+}
+
+
+main{
+	background-color: white;
+	border-radius: 20px;
+	margin: auto;
+	margin-top: 50px;
+	max-width: 800px;
+	padding-bottom: 50px;
+}
+
+
+h1{
+	text-align: center;
+}
+
+
+p{
+	font-size: 20px;
+	margin: 40px 10% 0px 10%;
+	text-indent: 50px;
+	text-align: justify;
+}
+
+img{
+	max-width: 600px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}
+
+iframe{
+	margin-top: 30px;
+	margin-left: 50%;
+	transform: translateX(-50%);
+}

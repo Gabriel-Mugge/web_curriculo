@@ -13,6 +13,7 @@
 	padding-top: 30px;
 	padding-bottom: 30px;
 	flex-wrap: wrap;
+	
 }
 
 
@@ -50,6 +51,8 @@
 .card-project p{
 	margin: 20px 30px; 
 	color: #A4AAC0;
-	text-align: justify;
 	font-size: 1.2em;
+	text-indent: 20px;
+	text-align: left;
 }
+
